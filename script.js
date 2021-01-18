@@ -1,15 +1,37 @@
+
+
 let size = prompt("How big should the grid be?")
-let container = document.querySelector('.container')
 
-container.style.gridTemplateColumns=`repeat(${size},auto)`
-
+createGrid(size)
 
 
+function createGrid(size){
+    let container = document.querySelector('.container')
+    container.style.gridTemplateColumns=`repeat(${size},auto)`
 
-for (let index = 1; index < parseInt(Math.pow(size,2))+1; index++) {
-    let block = document.createElement("div")
-    block.innerHTML=index
-    block.style.border="1px solid black"
-
-    container.appendChild(block)
+    for (let index = 0; index < parseInt(Math.pow(size,2)); index++) {
+        let block = document.createElement("div")
+        block.classList.add("cube")
+        container.appendChild(block)   
+    }
+    let cubes = document.getElementsByClassName("cube")
+    
+    for(let i=0;i<cubes.length;i++){
+        let cube = cubes[i]
+        cube.addEventListener('mouseover',staticChange)
+    }  
 }
+function staticChange(){
+    this.classList.add("changeColors")
+}
+function clearGrid(){
+    Array.from(document.getElementsByClassName("cube")).forEach(element => {
+        element.classList.remove("changeColors")
+    });
+   
+}
+
+
+
+
+
