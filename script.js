@@ -14,13 +14,12 @@ function createGrid(size){
         block.classList.add("cube")
         container.appendChild(block)   
     }
-    let cubes = document.getElementsByClassName("cube")
-    
-    for(let i=0;i<cubes.length;i++){
-        let cube = cubes[i]
-        cube.addEventListener('mouseover',staticChange)
-    }  
+    Array.from(document.getElementsByClassName("cube")).forEach(element=>{
+        element.addEventListener('mouseover',staticChange)
+    });
 }
+
+
 function staticChange(){
     this.classList.add("changeColors")
 }
