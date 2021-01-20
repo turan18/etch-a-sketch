@@ -1,8 +1,8 @@
 
 
-let size = prompt("How big should the grid be?")
+// let size = prompt("How big should the grid be?")
 
-createGrid(size)
+createGrid(50)
 
 
 function createGrid(size){
@@ -23,12 +23,14 @@ function createGrid(size){
 function staticChange(){
     this.classList.add("changeColors")
 }
+
 function clearGrid(){
     Array.from(document.getElementsByClassName("cube")).forEach(element => {
         element.classList.remove("changeColors")
     });
    
 }
+
 
 
 

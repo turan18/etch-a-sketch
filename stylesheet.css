@@ -37,6 +37,7 @@
     max-height: 80%;
     top:10%;
     bottom: 10%;
+    box-shadow: 0px 15px 25px rgb(28, 84, 151);
 }
 .icons{
     height: 100%;
@@ -48,15 +49,30 @@
     list-style: none;
 }
 .icons button{
-    background: transparent;
+    background-color: rgba(71, 45, 187, 0.432);
     border: none;
     outline: none;
-
+    margin: 0 20%;
+    box-shadow: 0px 15px 20px rgb(40, 28, 70);
+    border-radius: 20%;
+    border: 2px solid red;
+    
 }
 .icons button:hover{
-    box-shadow: 20%;
+    transform: translateY(-9px);
+    box-shadow: 0px 15px 20px rgb(209, 158, 222);
 }
 .icons img{
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.sample{
+    position: fixed;
+    top: 10%;
+    bottom: 40%;
+    left: 5%;
+    width: 20%;
+    outline: 2px solid green;
+    display: grid;
 }
