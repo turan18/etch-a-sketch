@@ -10,6 +10,6 @@ Options include
 * [x] Bucket to change background color and pencil color
 * [x] Slider to change size of grid andgrid on/off
 * [x] Transition effect slider
-* [] Eraser
+* [x] Eraser
 * [x] Clear entire grid
-* [] Save
+* [x] Save

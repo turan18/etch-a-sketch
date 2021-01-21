@@ -15,13 +15,13 @@
                     <div>
                     Chose background color:
                     </div>
-                    <input type="color" id="bkgColor" value="white">
+                    <input type="color" id="bkgColor" value="#FFFFFF">
                 </div>
                 <div>
                     <div>
                     Chose pencil color:
                     </div>
-                    <input type="color" id="penColor" value="black">
+                    <input type="color" id="penColor" value="#000000">
                 </div>
                 <div>
                     <button onclick="getUserColor()">
@@ -71,8 +71,12 @@
                 </button>
             </li>
             <li>
+                <button onclick="draw()" class="drwbttn"> 
+                    <img src="/images/pen.png">
+                </button>
+            </li>
+            <li>
                 <button onclick="eraser()"> 
-                    <!-- NOT IMPLEMENTED -->
                     <img src="/images/eraser.png">
                 </button>
             </li>
@@ -82,8 +86,8 @@
                 </button>
             </li>
             <li>
-                <button onclick="save()">
-                    <!-- NOT IMPLEMENTED -->
+                <button id="download" onclick="save()">
+                   
                     <img src="/images/save.png">
                 </button>
             </li>
@@ -91,9 +95,10 @@
     
     </div>
     <main class="main">
-        <div class="container"></div>   
+        <div class="container" id="drawing"></div>   
     </main>
     
 </body>
 <script src="/script.js"></script>
+<script src="html2canvas.min.js"></script>
 </html>

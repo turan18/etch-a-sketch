@@ -23,12 +23,11 @@ function createGrid(size){
 
 
 function staticChange(){
+    
     let pencolor = document.getElementById("penColor").value;
     this.style.backgroundColor=pencolor;
     this.classList.add("touched");
 }
-
-
 
 
 function displayOption(name){
@@ -61,8 +60,8 @@ function getUserColor(){
     document.documentElement.style.setProperty('--pen-color', pencolor);
 }
 function clearGrid(){
-    let bkgcolor = document.getElementById("bkgColor").value;
-    let touchedcubes = document.getElementsByClassName("touched");
+    
+    let touchedcubes = document.getElementsByClassName("cube");
     console.log(touchedcubes);
     for(let i=0;i<touchedcubes.length;i++){
         touchedcubes[i].style.backgroundColor=null;
@@ -76,6 +75,49 @@ function anim(time){
         element.style.transitionDuration=time;
     });
 }
+
+function draw(){
+    let button = document.querySelector(".drwbttn");
+    button.classList.remove("pulsing")
+    Array.from(document.getElementsByClassName("cube")).forEach(element=>{
+        element.addEventListener('mouseover',staticChange)
+    });
+}
+
 function eraser(){
-    // Not Implemented yet
+    let button = document.querySelector(".drwbttn");
+    button.classList.add("pulsing")
+    Array.from(document.getElementsByClassName("cube")).forEach(element=>{
+        element.removeEventListener('mouseover',staticChange)
+        element.addEventListener('mouseover',erase)
+    });
+}
+function erase(){
+    this.style.backgroundColor=null;
+    
+}
+
+function save(){
+    html2canvas(document.querySelector('#drawing')).then(function(canvas) {
+        console.log(canvas);
+        saveAs(canvas.toDataURL(), 'drawing.png');
+        
+    });
+}
+
+function saveAs(uri, filename) {
+    var link = document.createElement('a');
+    if (typeof link.download === 'string') {
+
+        link.href = uri;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+    } else {
+
+        window.open(uri);
+
+    }
 }
