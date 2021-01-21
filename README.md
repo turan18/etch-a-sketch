@@ -13,3 +13,5 @@ Options include
 * [x] Eraser
 * [x] Clear entire grid
 * [x] Save
+
+Save functionality created using html2canvas library. Credit goes to https://github.com/niklasvh/html2canvas.
