@@ -3,14 +3,13 @@
 
 To Do:
 
-[x] Create Grid
-[x] Allow user to draw
-[x] Create side bar
+* [x] Create Grid
+* [x] Allow user to draw
+* [x] Create side bar
 Options include
-[] Bucket to change background color and grid on/off
-[] Pencil to change color of pen
-[] Slider to change size of grid
-[] Transition effect slider
-[] Eraser
-[] Clear entire grid
-[] Save
+* [x] Bucket to change background color and pencil color
+* [x] Slider to change size of grid andgrid on/off
+* [x] Transition effect slider
+* [] Eraser
+* [x] Clear entire grid
+* [] Save
