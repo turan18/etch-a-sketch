@@ -66,6 +66,9 @@ function clearGrid(){
     for(let i=0;i<touchedcubes.length;i++){
         touchedcubes[i].style.backgroundColor=null;
     }
+    Array.from(document.querySelectorAll(".cube")).forEach(element=>{
+        element.classList.remove("touched");
+    });
 }
 function anim(time){
     time = time + 'ms'
