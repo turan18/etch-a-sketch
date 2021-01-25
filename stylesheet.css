@@ -10,9 +10,11 @@
     box-sizing: border-box;
 }
 body{
-  background-image: url('/images/bkg.jpg'); 
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* This will make image fit according to body size*/
+    background: url('/images/bkg.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .title{
     display: flex;
