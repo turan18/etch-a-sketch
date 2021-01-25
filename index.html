@@ -7,31 +7,37 @@
     
     <title>Etch-a-Sketch</title>
 </head>
-<body style="background-color: rgb(108, 132, 209);" onload="createGrid(10)">
+<body onload="createGrid(10)">
+    <div class="title">
+        <p>Doodle away...</p>>
+    </div>
     <div class="options">
         <div class="chosecolor">
             <div class="speech-bubble">
-                <div>
-                    <div>
+                <div class="choseBkg">
+                    <div style="padding-bottom: 3%;">
                     Chose background color:
                     </div>
                     <input type="color" id="bkgColor" value="#FFFFFF">
                 </div>
-                <div>
-                    <div>
+                <div class="chosePencil">
+                    <div style="padding-bottom: 3%;">
                     Chose pencil color:
                     </div>
                     <input type="color" id="penColor" value="#000000">
                 </div>
-                <div>
-                    <button onclick="getUserColor()">
+                <div class="colorBtn">
+                    <button onclick="getUserColor()" class="saveColor">
                         Save
                     </button>
                 </div>
              </div>
         </div>
         <div class="chosegrid">
-            <div class="speech-bubble2">
+            <div class="speech-bubble2" style="text-align: center;">
+                <div style="padding-bottom: 5%;">
+                    Chose grid size(1-100):
+                </div>
                 <input type="range" min="1" max="100" id="gridSize" value="10">
                 
                 <div>
@@ -40,20 +46,23 @@
                     <input type="radio" id="off" value="off" name="grid" >
                     <label for="off">Grid off</label><br>
                 </div>
-                <div><button onclick="createGrid(document.getElementById('gridSize').value)">Save</button></div>
+                <div><button onclick="createGrid(document.getElementById('gridSize').value)" style="margin-top: 3%;">Save</button></div>
             </div>
                 
         </div>
         <div class="choseanim">
-            <div class="speech-bubble3">
-                <input type="range" min="100" max="1000" id="atime" value="100">
-                <div>
+            <div class="speech-bubble3" style="text-align: center;">
+                <div style="padding-bottom: 5%;">
+                    Chose transition speed(100-1000 ms):
+                </div>
+                <input type="range" min="100" max="1000" id="atime" value="1000">
+                <div style="padding-top: 3%;">
                     <button onclick="anim(document.getElementById('atime').value)">Save</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="sidebar" style="background-color:rgba(112, 96, 155, 0.938)">
+    <div class="sidebar">
         <ul class="icons">
             <li>
                 <button onclick="displayOption('.speech-bubble')">
@@ -77,7 +86,7 @@
             </li>
             <li>
                 <button onclick="eraser()"> 
-                    <img src="/images/eraser.png">
+                    <img src="/images/eraser2.png">
                 </button>
             </li>
             <li>
@@ -88,7 +97,7 @@
             <li>
                 <button id="download" onclick="save()">
                    
-                    <img src="/images/save.png">
+                    <img src="/images/download2.png">
                 </button>
             </li>
          </ul>
