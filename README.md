@@ -1,5 +1,4 @@
 # etch-a-sketch
-
 Paint/Sketch client-side app.
 
 To Do:
